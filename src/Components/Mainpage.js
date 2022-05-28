@@ -4,13 +4,14 @@ import { MdCake } from "react-icons/md";
 import { HiOutlineUserGroup } from "react-icons/hi";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { BsCalendar } from "react-icons/bs";
+import AccordianDropdown from './AccordianDropdown';
 import Card from './Card';
 import Image from "../Images/image.png";
 
 
 const Mainpage = () => {
   return (
-    <div className="px-36">
+    <div className="px-36   ">
       <div className="flex font-bold text-sky-600 text-[17px]">
         <MdAddLocation className="w-7 h-7 pt-1 px" />
         <p className="px-1">Maths</p>
@@ -45,16 +46,20 @@ const Mainpage = () => {
               <p className="px-5 text-xl">5 Weeks Duration</p>
             </div>
           </div>
-          <div className='py-4'>
-              <Card/>
+          <div className="py-4">
+            <Card />
           </div>
         </div>
 
         <div>
-          <img className="max-w-lg mx-5" src={Image}></img>
+          <img className="max-w-lg mx-5 2xl:mx-40" src={Image}></img>
         </div>
       </div>
-      <hr className=''/>
+      <hr className="" />
+      <div>
+        <p className="font-bold text-2xl text-slate-700 mb-3">Available Batches</p>
+      </div>
+      <AccordianDropdown/>
     </div>
   );
 }
